@@ -3,43 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Polaar – Outdoor Zubehör</title>
+  <title>Polaar – Vereinfachter Test</title>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
+    html {
       height: 100%;
-      background-color: #000;
-      color: white;
     }
+    body {
+      /* --- BILD-EINSTELLUNGEN --- */
+      /* Wir verwenden jetzt den VOLLEN, direkten Link zum Bild für diesen Test */
+      background-image: url("https://tagtic111.github.io/polaar/3343.jpg");
 
-    .background {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-image: url("/3343.jpg");
+      /* Standard-Hintergrundeinstellungen */
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
-      opacity: 0.5;
-      z-index: -1;
-    }
+      background-attachment: fixed; /* Sorgt dafür, dass der Hintergrund beim Scrollen stillsteht */
 
-    .content {
+      /* --- LAYOUT & TEXT --- */
+      margin: 0;
+      font-family: sans-serif;
+      color: white;
+
+      /* Inhalt zentrieren */
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
-      height: 100%;
-      padding: 2rem;
+      min-height: 100vh; /* Mindesthöhe des ganzen Fensters */
     }
 
     .text-block {
       max-width: 700px;
-      background: rgba(0, 0, 0, 0.65);
       padding: 1.5rem 2rem;
-      border-radius: 10px;
+      text-align: center;
+      /* Wir entfernen den schwarzen Hintergrund und fügen einen leichten Schlagschatten hinzu, damit der Text lesbar ist */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
     h1 {
@@ -54,12 +51,9 @@
   </style>
 </head>
 <body>
-  <div class="background"></div>
-  <div class="content">
-    <div class="text-block">
-      <h1>Wir gestalten unsere Seite neu</h1>
-      <p>Polaar ist die Marke für durchdachtes Outdoor-Zubehör – ultraleichte Matten, Kissen und mehr für perfekten Schlaf unter freiem Himmel.</p>
-    </div>
+  <div class="text-block">
+    <h1>Wir gestalten unsere Seite neu</h1>
+    <p>Polaar ist die Marke für durchdachtes Outdoor-Zubehör – ultraleichte Matten, Kissen und mehr für perfekten Schlaf unter freiem Himmel.</p>
   </div>
 </body>
 </html>
