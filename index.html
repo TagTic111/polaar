@@ -3,21 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Polaar – Vereinfachter Test</title>
+  <title>Polaar – Outdoor Zubehör</title>
   <style>
     html {
       height: 100%;
     }
     body {
       /* --- BILD-EINSTELLUNGEN --- */
-      /* Wir verwenden jetzt den VOLLEN, direkten Link zum Bild für diesen Test */
-      background-image: url("https://tagtic111.github.io/polaar/3343.jpg");
+      /* Hier ist der Trick: Wir definieren ZWEI Hintergrundbilder.
+        1. Ein schwarzer, halb-durchsichtiger Farbverlauf.
+        2. Ihr eigentliches Bild.
+        Der Browser legt sie übereinander.
+      */
+      background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url("https://tagtic111.github.io/polaar/3343.jpg");
 
       /* Standard-Hintergrundeinstellungen */
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
-      background-attachment: fixed; /* Sorgt dafür, dass der Hintergrund beim Scrollen stillsteht */
+      background-attachment: fixed;
 
       /* --- LAYOUT & TEXT --- */
       margin: 0;
@@ -28,15 +34,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh; /* Mindesthöhe des ganzen Fensters */
+      min-height: 100vh;
     }
 
     .text-block {
       max-width: 700px;
       padding: 1.5rem 2rem;
       text-align: center;
-      /* Wir entfernen den schwarzen Hintergrund und fügen einen leichten Schlagschatten hinzu, damit der Text lesbar ist */
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      /* Der Textschatten wird jetzt nicht mehr benötigt. */
     }
 
     h1 {
